@@ -1,0 +1,186 @@
+[00:00:01.168] Server  LOG     ✓ Ready in 825ms
+[00:02:36.619] Server  LOG     ✓ Compiled in 5.2s
+[00:03:01.007] Browser ERROR   ./app/page.tsx:15:10
+Ecmascript file had an error
+  13 | import { Shield, AlertTriangle, Activity, Server } from "lucide-react"
+  14 | import { useState } from "react"
+> 15 | import { Badge } from "@/components/ui/badge"
+     |          ^^^^^
+  16 |
+  17 |
+  18 | const kpis = [
+
+the name `Badge` is defined multiple times
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:14:30.750] Server  LOG     ✓ Compiled in 538ms
+[00:03:15.053] Server  LOG     ✓ Compiled in 572ms
+[00:04:05.916] Server  LOG     ✓ Compiled in 423ms
+[00:05:21.430] Server  LOG     ✓ Compiled in 764ms
+[00:08:07.845] Server  ERROR   ⨯ TurbopackInternalError: Failed to lookup task id: Looking up task id for CachedTaskType { native_fn: NativeFunction { name: "get_written_endpoint_with_issues_operation", global_name: "next-swc-napi@next_swc_napi::next_api::endpoint::get_written_endpoint_with_issues_operation", .. }, this: None, arg: (OperationVc { node: RawVc::TaskOutput(238) },) } from database failed
+
+Debug info:
+- Failed to lookup task id: Looking up task id for CachedTaskType { native_fn: NativeFunction { name: "get_written_endpoint_with_issues_operation", global_name: "next-swc-napi@next_swc_napi::next_api::endpoint::get_written_endpoint_with_issues_operation", .. }, this: None, arg: (OperationVc { node: RawVc::TaskOutput(238) },) } from database failed
+  
+  Caused by:
+      0: Failed to deserialize AMQF from 00000159.meta for 00000155.sst
+      1: ArrayLengthMismatch { required: 91, found: 9366 }
+[00:08:07.856] Server  ERROR   TurbopackInternalError: Failed to lookup task id: Looking up task id for CachedTaskType { native_fn: NativeFunction { name: "get_written_endpoint_with_issues_operation", global_name: "next-swc-napi@next_swc_napi::next_api::endpoint::get_written_endpoint_with_issues_operation", .. }, this: None, arg: (OperationVc { node: RawVc::TaskOutput(249) },) } from database failed
+
+Debug info:
+- Failed to lookup task id: Looking up task id for CachedTaskType { native_fn: NativeFunction { name: "get_written_endpoint_with_issues_operation", global_name: "next-swc-napi@next_swc_napi::next_api::endpoint::get_written_endpoint_with_issues_operation", .. }, this: None, arg: (OperationVc { node: RawVc::TaskOutput(249) },) } from database failed
+  
+  Caused by:
+      0: Failed to deserialize AMQF from 00000159.meta for 00000155.sst
+      1: ArrayLengthMismatch { required: 91, found: 9366 }
+[00:08:07.864] Server  ERROR   ⨯ TurbopackInternalError: Failed to lookup task id: Looking up task id for CachedTaskType { native_fn: NativeFunction { name: "get_written_endpoint_with_issues_operation", global_name: "next-swc-napi@next_swc_napi::next_api::endpoint::get_written_endpoint_with_issues_operation", .. }, this: None, arg: (OperationVc { node: RawVc::TaskOutput(249) },) } from database failed
+
+Debug info:
+- Failed to lookup task id: Looking up task id for CachedTaskType { native_fn: NativeFunction { name: "get_written_endpoint_with_issues_operation", global_name: "next-swc-napi@next_swc_napi::next_api::endpoint::get_written_endpoint_with_issues_operation", .. }, this: None, arg: (OperationVc { node: RawVc::TaskOutput(249) },) } from database failed
+  
+  Caused by:
+      0: Failed to deserialize AMQF from 00000159.meta for 00000155.sst
+      1: ArrayLengthMismatch { required: 91, found: 9366 }
+[00:08:07.870] Server  ERROR   TurbopackInternalError: Failed to lookup task id: Looking up task id for CachedTaskType { native_fn: NativeFunction { name: "get_written_endpoint_with_issues_operation", global_name: "next-swc-napi@next_swc_napi::next_api::endpoint::get_written_endpoint_with_issues_operation", .. }, this: None, arg: (OperationVc { node: RawVc::TaskOutput(249) },) } from database failed
+
+Debug info:
+- Failed to lookup task id: Looking up task id for CachedTaskType { native_fn: NativeFunction { name: "get_written_endpoint_with_issues_operation", global_name: "next-swc-napi@next_swc_napi::next_api::endpoint::get_written_endpoint_with_issues_operation", .. }, this: None, arg: (OperationVc { node: RawVc::TaskOutput(249) },) } from database failed
+  
+  Caused by:
+      0: Failed to deserialize AMQF from 00000159.meta for 00000155.sst
+      1: ArrayLengthMismatch { required: 91, found: 9366 }
+[00:08:15.156] Server  ERROR   ⨯ TurbopackInternalError: Failed to lookup task id: Looking up task id for CachedTaskType { native_fn: NativeFunction { name: "get_written_endpoint_with_issues_operation", global_name: "next-swc-napi@next_swc_napi::next_api::endpoint::get_written_endpoint_with_issues_operation", .. }, this: None, arg: (OperationVc { node: RawVc::TaskOutput(238) },) } from database failed
+
+Debug info:
+- Failed to lookup task id: Looking up task id for CachedTaskType { native_fn: NativeFunction { name: "get_written_endpoint_with_issues_operation", global_name: "next-swc-napi@next_swc_napi::next_api::endpoint::get_written_endpoint_with_issues_operation", .. }, this: None, arg: (OperationVc { node: RawVc::TaskOutput(238) },) } from database failed
+  
+  Caused by:
+      0: Failed to deserialize AMQF from 00000159.meta for 00000155.sst
+      1: ArrayLengthMismatch { required: 91, found: 9366 }
+[00:08:15.164] Server  ERROR   TurbopackInternalError: Failed to lookup task id: Looking up task id for CachedTaskType { native_fn: NativeFunction { name: "get_written_endpoint_with_issues_operation", global_name: "next-swc-napi@next_swc_napi::next_api::endpoint::get_written_endpoint_with_issues_operation", .. }, this: None, arg: (OperationVc { node: RawVc::TaskOutput(249) },) } from database failed
+
+Debug info:
+- Failed to lookup task id: Looking up task id for CachedTaskType { native_fn: NativeFunction { name: "get_written_endpoint_with_issues_operation", global_name: "next-swc-napi@next_swc_napi::next_api::endpoint::get_written_endpoint_with_issues_operation", .. }, this: None, arg: (OperationVc { node: RawVc::TaskOutput(249) },) } from database failed
+  
+  Caused by:
+      0: Failed to deserialize AMQF from 00000159.meta for 00000155.sst
+      1: ArrayLengthMismatch { required: 91, found: 9366 }
+[00:08:15.215] Server  ERROR   ⨯ TurbopackInternalError: Failed to lookup task id: Looking up task id for CachedTaskType { native_fn: NativeFunction { name: "get_written_endpoint_with_issues_operation", global_name: "next-swc-napi@next_swc_napi::next_api::endpoint::get_written_endpoint_with_issues_operation", .. }, this: None, arg: (OperationVc { node: RawVc::TaskOutput(249) },) } from database failed
+
+Debug info:
+- Failed to lookup task id: Looking up task id for CachedTaskType { native_fn: NativeFunction { name: "get_written_endpoint_with_issues_operation", global_name: "next-swc-napi@next_swc_napi::next_api::endpoint::get_written_endpoint_with_issues_operation", .. }, this: None, arg: (OperationVc { node: RawVc::TaskOutput(249) },) } from database failed
+  
+  Caused by:
+      0: Failed to deserialize AMQF from 00000159.meta for 00000155.sst
+      1: ArrayLengthMismatch { required: 91, found: 9366 }
+[00:08:15.229] Server  ERROR   TurbopackInternalError: Failed to lookup task id: Looking up task id for CachedTaskType { native_fn: NativeFunction { name: "get_written_endpoint_with_issues_operation", global_name: "next-swc-napi@next_swc_napi::next_api::endpoint::get_written_endpoint_with_issues_operation", .. }, this: None, arg: (OperationVc { node: RawVc::TaskOutput(249) },) } from database failed
+
+Debug info:
+- Failed to lookup task id: Looking up task id for CachedTaskType { native_fn: NativeFunction { name: "get_written_endpoint_with_issues_operation", global_name: "next-swc-napi@next_swc_napi::next_api::endpoint::get_written_endpoint_with_issues_operation", .. }, this: None, arg: (OperationVc { node: RawVc::TaskOutput(249) },) } from database failed
+  
+  Caused by:
+      0: Failed to deserialize AMQF from 00000159.meta for 00000155.sst
+      1: ArrayLengthMismatch { required: 91, found: 9366 }
+[01:13:59.191] Server  ERROR   ⨯ TurbopackInternalError: Failed to lookup task id: Looking up task id for CachedTaskType { native_fn: NativeFunction { name: "get_written_endpoint_with_issues_operation", global_name: "next-swc-napi@next_swc_napi::next_api::endpoint::get_written_endpoint_with_issues_operation", .. }, this: None, arg: (OperationVc { node: RawVc::TaskOutput(238) },) } from database failed
+
+Debug info:
+- Failed to lookup task id: Looking up task id for CachedTaskType { native_fn: NativeFunction { name: "get_written_endpoint_with_issues_operation", global_name: "next-swc-napi@next_swc_napi::next_api::endpoint::get_written_endpoint_with_issues_operation", .. }, this: None, arg: (OperationVc { node: RawVc::TaskOutput(238) },) } from database failed
+  
+  Caused by:
+      0: Failed to deserialize AMQF from 00000159.meta for 00000155.sst
+      1: ArrayLengthMismatch { required: 91, found: 9366 }
+[01:13:59.215] Server  ERROR   TurbopackInternalError: Failed to lookup task id: Looking up task id for CachedTaskType { native_fn: NativeFunction { name: "get_written_endpoint_with_issues_operation", global_name: "next-swc-napi@next_swc_napi::next_api::endpoint::get_written_endpoint_with_issues_operation", .. }, this: None, arg: (OperationVc { node: RawVc::TaskOutput(249) },) } from database failed
+
+Debug info:
+- Failed to lookup task id: Looking up task id for CachedTaskType { native_fn: NativeFunction { name: "get_written_endpoint_with_issues_operation", global_name: "next-swc-napi@next_swc_napi::next_api::endpoint::get_written_endpoint_with_issues_operation", .. }, this: None, arg: (OperationVc { node: RawVc::TaskOutput(249) },) } from database failed
+  
+  Caused by:
+      0: Failed to deserialize AMQF from 00000159.meta for 00000155.sst
+      1: ArrayLengthMismatch { required: 91, found: 9366 }
+[01:13:59.224] Server  ERROR   ⨯ TurbopackInternalError: Failed to lookup task id: Looking up task id for CachedTaskType { native_fn: NativeFunction { name: "get_written_endpoint_with_issues_operation", global_name: "next-swc-napi@next_swc_napi::next_api::endpoint::get_written_endpoint_with_issues_operation", .. }, this: None, arg: (OperationVc { node: RawVc::TaskOutput(249) },) } from database failed
+
+Debug info:
+- Failed to lookup task id: Looking up task id for CachedTaskType { native_fn: NativeFunction { name: "get_written_endpoint_with_issues_operation", global_name: "next-swc-napi@next_swc_napi::next_api::endpoint::get_written_endpoint_with_issues_operation", .. }, this: None, arg: (OperationVc { node: RawVc::TaskOutput(249) },) } from database failed
+  
+  Caused by:
+      0: Failed to deserialize AMQF from 00000159.meta for 00000155.sst
+      1: ArrayLengthMismatch { required: 91, found: 9366 }
+[01:13:59.228] Server  ERROR   TurbopackInternalError: Failed to lookup task id: Looking up task id for CachedTaskType { native_fn: NativeFunction { name: "get_written_endpoint_with_issues_operation", global_name: "next-swc-napi@next_swc_napi::next_api::endpoint::get_written_endpoint_with_issues_operation", .. }, this: None, arg: (OperationVc { node: RawVc::TaskOutput(249) },) } from database failed
+
+Debug info:
+- Failed to lookup task id: Looking up task id for CachedTaskType { native_fn: NativeFunction { name: "get_written_endpoint_with_issues_operation", global_name: "next-swc-napi@next_swc_napi::next_api::endpoint::get_written_endpoint_with_issues_operation", .. }, this: None, arg: (OperationVc { node: RawVc::TaskOutput(249) },) } from database failed
+  
+  Caused by:
+      0: Failed to deserialize AMQF from 00000159.meta for 00000155.sst
+      1: ArrayLengthMismatch { required: 91, found: 9366 }
+[01:14:42.798] Server  ERROR   ⨯ TurbopackInternalError: Failed to lookup task id: Looking up task id for CachedTaskType { native_fn: NativeFunction { name: "get_written_endpoint_with_issues_operation", global_name: "next-swc-napi@next_swc_napi::next_api::endpoint::get_written_endpoint_with_issues_operation", .. }, this: None, arg: (OperationVc { node: RawVc::TaskOutput(238) },) } from database failed
+
+Debug info:
+- Failed to lookup task id: Looking up task id for CachedTaskType { native_fn: NativeFunction { name: "get_written_endpoint_with_issues_operation", global_name: "next-swc-napi@next_swc_napi::next_api::endpoint::get_written_endpoint_with_issues_operation", .. }, this: None, arg: (OperationVc { node: RawVc::TaskOutput(238) },) } from database failed
+  
+  Caused by:
+      0: Failed to deserialize AMQF from 00000159.meta for 00000155.sst
+      1: ArrayLengthMismatch { required: 91, found: 9366 }
+[01:14:42.807] Server  ERROR   TurbopackInternalError: Failed to lookup task id: Looking up task id for CachedTaskType { native_fn: NativeFunction { name: "get_written_endpoint_with_issues_operation", global_name: "next-swc-napi@next_swc_napi::next_api::endpoint::get_written_endpoint_with_issues_operation", .. }, this: None, arg: (OperationVc { node: RawVc::TaskOutput(249) },) } from database failed
+
+Debug info:
+- Failed to lookup task id: Looking up task id for CachedTaskType { native_fn: NativeFunction { name: "get_written_endpoint_with_issues_operation", global_name: "next-swc-napi@next_swc_napi::next_api::endpoint::get_written_endpoint_with_issues_operation", .. }, this: None, arg: (OperationVc { node: RawVc::TaskOutput(249) },) } from database failed
+  
+  Caused by:
+      0: Failed to deserialize AMQF from 00000159.meta for 00000155.sst
+      1: ArrayLengthMismatch { required: 91, found: 9366 }
+[01:14:42.834] Server  ERROR   ⨯ TurbopackInternalError: Failed to lookup task id: Looking up task id for CachedTaskType { native_fn: NativeFunction { name: "get_written_endpoint_with_issues_operation", global_name: "next-swc-napi@next_swc_napi::next_api::endpoint::get_written_endpoint_with_issues_operation", .. }, this: None, arg: (OperationVc { node: RawVc::TaskOutput(249) },) } from database failed
+
+Debug info:
+- Failed to lookup task id: Looking up task id for CachedTaskType { native_fn: NativeFunction { name: "get_written_endpoint_with_issues_operation", global_name: "next-swc-napi@next_swc_napi::next_api::endpoint::get_written_endpoint_with_issues_operation", .. }, this: None, arg: (OperationVc { node: RawVc::TaskOutput(249) },) } from database failed
+  
+  Caused by:
+      0: Failed to deserialize AMQF from 00000159.meta for 00000155.sst
+      1: ArrayLengthMismatch { required: 91, found: 9366 }
+[01:14:42.842] Server  ERROR   TurbopackInternalError: Failed to lookup task id: Looking up task id for CachedTaskType { native_fn: NativeFunction { name: "get_written_endpoint_with_issues_operation", global_name: "next-swc-napi@next_swc_napi::next_api::endpoint::get_written_endpoint_with_issues_operation", .. }, this: None, arg: (OperationVc { node: RawVc::TaskOutput(249) },) } from database failed
+
+Debug info:
+- Failed to lookup task id: Looking up task id for CachedTaskType { native_fn: NativeFunction { name: "get_written_endpoint_with_issues_operation", global_name: "next-swc-napi@next_swc_napi::next_api::endpoint::get_written_endpoint_with_issues_operation", .. }, this: None, arg: (OperationVc { node: RawVc::TaskOutput(249) },) } from database failed
+  
+  Caused by:
+      0: Failed to deserialize AMQF from 00000159.meta for 00000155.sst
+      1: ArrayLengthMismatch { required: 91, found: 9366 }
+[01:15:06.683] Server  ERROR   ⨯ TurbopackInternalError: Failed to lookup task id: Looking up task id for CachedTaskType { native_fn: NativeFunction { name: "get_written_endpoint_with_issues_operation", global_name: "next-swc-napi@next_swc_napi::next_api::endpoint::get_written_endpoint_with_issues_operation", .. }, this: None, arg: (OperationVc { node: RawVc::TaskOutput(238) },) } from database failed
+
+Debug info:
+- Failed to lookup task id: Looking up task id for CachedTaskType { native_fn: NativeFunction { name: "get_written_endpoint_with_issues_operation", global_name: "next-swc-napi@next_swc_napi::next_api::endpoint::get_written_endpoint_with_issues_operation", .. }, this: None, arg: (OperationVc { node: RawVc::TaskOutput(238) },) } from database failed
+  
+  Caused by:
+      0: Failed to deserialize AMQF from 00000159.meta for 00000155.sst
+      1: ArrayLengthMismatch { required: 91, found: 9366 }
+[01:15:06.689] Server  ERROR   TurbopackInternalError: Failed to lookup task id: Looking up task id for CachedTaskType { native_fn: NativeFunction { name: "get_written_endpoint_with_issues_operation", global_name: "next-swc-napi@next_swc_napi::next_api::endpoint::get_written_endpoint_with_issues_operation", .. }, this: None, arg: (OperationVc { node: RawVc::TaskOutput(249) },) } from database failed
+
+Debug info:
+- Failed to lookup task id: Looking up task id for CachedTaskType { native_fn: NativeFunction { name: "get_written_endpoint_with_issues_operation", global_name: "next-swc-napi@next_swc_napi::next_api::endpoint::get_written_endpoint_with_issues_operation", .. }, this: None, arg: (OperationVc { node: RawVc::TaskOutput(249) },) } from database failed
+  
+  Caused by:
+      0: Failed to deserialize AMQF from 00000159.meta for 00000155.sst
+      1: ArrayLengthMismatch { required: 91, found: 9366 }
+[01:15:06.697] Server  ERROR   ⨯ TurbopackInternalError: Failed to lookup task id: Looking up task id for CachedTaskType { native_fn: NativeFunction { name: "get_written_endpoint_with_issues_operation", global_name: "next-swc-napi@next_swc_napi::next_api::endpoint::get_written_endpoint_with_issues_operation", .. }, this: None, arg: (OperationVc { node: RawVc::TaskOutput(249) },) } from database failed
+
+Debug info:
+- Failed to lookup task id: Looking up task id for CachedTaskType { native_fn: NativeFunction { name: "get_written_endpoint_with_issues_operation", global_name: "next-swc-napi@next_swc_napi::next_api::endpoint::get_written_endpoint_with_issues_operation", .. }, this: None, arg: (OperationVc { node: RawVc::TaskOutput(249) },) } from database failed
+  
+  Caused by:
+      0: Failed to deserialize AMQF from 00000159.meta for 00000155.sst
+      1: ArrayLengthMismatch { required: 91, found: 9366 }
+[01:15:06.705] Server  ERROR   TurbopackInternalError: Failed to lookup task id: Looking up task id for CachedTaskType { native_fn: NativeFunction { name: "get_written_endpoint_with_issues_operation", global_name: "next-swc-napi@next_swc_napi::next_api::endpoint::get_written_endpoint_with_issues_operation", .. }, this: None, arg: (OperationVc { node: RawVc::TaskOutput(249) },) } from database failed
+
+Debug info:
+- Failed to lookup task id: Looking up task id for CachedTaskType { native_fn: NativeFunction { name: "get_written_endpoint_with_issues_operation", global_name: "next-swc-napi@next_swc_napi::next_api::endpoint::get_written_endpoint_with_issues_operation", .. }, this: None, arg: (OperationVc { node: RawVc::TaskOutput(249) },) } from database failed
+  
+  Caused by:
+      0: Failed to deserialize AMQF from 00000159.meta for 00000155.sst
+      1: ArrayLengthMismatch { required: 91, found: 9366 }

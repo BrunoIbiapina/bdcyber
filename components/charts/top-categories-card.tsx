@@ -1,0 +1,65 @@
+"use client"
+
+import {
+  Bar,
+  BarChart,
+  CartesianGrid,
+  ResponsiveContainer,
+  Tooltip as RechartsTooltip,
+  XAxis,
+  YAxis,
+} from "recharts"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import type { CategoryCount } from "@/lib/metrics"
+
+interface TopCategoriesCardProps {
+  data: CategoryCount[]
+}
+
+export function TopCategoriesCard({ data }: TopCategoriesCardProps) {
+  return (
+    <Card className="border-border/50">
+      <CardHeader className="pb-2">
+        <CardTitle className="text-sm font-semibold text-foreground">Top Categorias</CardTitle>
+      </CardHeader>
+      <CardContent className="pt-0">
+        <div className="h-[240px] w-full">
+          <ResponsiveContainer width="100%" height="100%">
+            <BarChart data={data} layout="vertical" margin={{ top: 5, right: 10, left: 0, bottom: 0 }}>
+              <CartesianGrid strokeDasharray="3 3" stroke="var(--color-border)" strokeOpacity={0.5} horizontal={false} />
+              <XAxis
+                type="number"
+                tick={{ fontSize: 11, fill: "var(--color-muted-foreground)" }}
+                tickLine={false}
+                axisLine={false}
+              />
+              <YAxis
+                type="category"
+                dataKey="name"
+                tick={{ fontSize: 12, fill: "var(--color-foreground)" }}
+                tickLine={false}
+                axisLine={false}
+                width={75}
+              />
+              <RechartsTooltip
+                contentStyle={{
+                  backgroundColor: "var(--color-popover)",
+                  border: "1px solid var(--color-border)",
+                  borderRadius: "8px",
+                  fontSize: "12px",
+                  color: "var(--color-popover-foreground)",
+                }}
+              />
+              <Bar
+                dataKey="value"
+                radius={[0, 4, 4, 0]}
+                fill="var(--color-chart-1)"
+                maxBarSize={28}
+              />
+            </BarChart>
+          </ResponsiveContainer>
+        </div>
+      </CardContent>
+    </Card>
+  )
+}
