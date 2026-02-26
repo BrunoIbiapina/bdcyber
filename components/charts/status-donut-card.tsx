@@ -14,38 +14,47 @@ interface StatusDonutCardProps {
   data: StatusCount[]
 }
 
-const COLORS = [
-  "var(--color-chart-1)",
+// Semantic: green=Blocked, amber=Logged, gray=Ignored
+const STATUS_COLORS: Record<string, string> = {
+  Blocked: "var(--color-success)",
+  Logged:  "var(--color-warning)",
+  Ignored: "var(--color-muted-foreground)",
+}
+
+const FALLBACK_COLORS = [
   "var(--color-chart-2)",
   "var(--color-chart-3)",
-  "var(--color-chart-5)",
+  "var(--color-muted-foreground)",
 ]
 
 export function StatusDonutCard({ data }: StatusDonutCardProps) {
   const total = data.reduce((s, d) => s + d.value, 0)
 
   return (
-    <Card className="border-border/50">
-      <CardHeader className="pb-2">
-        <CardTitle className="text-sm font-semibold text-foreground">Distribuicao por Status</CardTitle>
+    <Card className="border border-border shadow-sm">
+      <CardHeader className="pb-2 pt-5 px-5">
+        <CardTitle className="text-sm font-semibold text-foreground">Distribuição por Status</CardTitle>
       </CardHeader>
-      <CardContent className="pt-0">
+      <CardContent className="pt-0 px-5 pb-5">
         <div className="flex items-center gap-4">
-          <div className="h-[200px] w-[200px] shrink-0">
+          <div className="h-[180px] w-[180px] shrink-0">
             <ResponsiveContainer width="100%" height="100%">
               <PieChart>
                 <Pie
                   data={data}
                   cx="50%"
                   cy="50%"
-                  innerRadius={55}
-                  outerRadius={85}
+                  innerRadius={52}
+                  outerRadius={80}
                   paddingAngle={3}
                   dataKey="value"
                   strokeWidth={0}
                 >
-                  {data.map((_, index) => (
-                    <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                  {data.map((item, index) => (
+                    <Cell
+                      key={`cell-${index}`}
+                      fill={STATUS_COLORS[item.name] ?? FALLBACK_COLORS[index % FALLBACK_COLORS.length]}
+                    />
                   ))}
                 </Pie>
                 <RechartsTooltip
@@ -60,16 +69,22 @@ export function StatusDonutCard({ data }: StatusDonutCardProps) {
               </PieChart>
             </ResponsiveContainer>
           </div>
-          <div className="flex flex-col gap-2.5">
-            {data.map((item, i) => (
-              <div key={item.name} className="flex items-center gap-2">
-                <div className="h-2.5 w-2.5 rounded-full" style={{ backgroundColor: COLORS[i % COLORS.length] }} />
-                <span className="text-xs text-muted-foreground">{item.name}</span>
-                <span className="ml-auto text-xs font-semibold text-foreground tabular-nums">
-                  {total > 0 ? ((item.value / total) * 100).toFixed(0) : 0}%
-                </span>
-              </div>
-            ))}
+
+          <div className="flex flex-col gap-3 flex-1">
+            {data.map((item, i) => {
+              const color = STATUS_COLORS[item.name] ?? FALLBACK_COLORS[i % FALLBACK_COLORS.length]
+              const pct = total > 0 ? ((item.value / total) * 100).toFixed(0) : "0"
+              return (
+                <div key={item.name} className="flex items-center gap-2">
+                  <div className="h-2 w-2 rounded-full shrink-0" style={{ backgroundColor: color }} />
+                  <span className="text-xs text-muted-foreground flex-1">{item.name}</span>
+                  <div className="text-right">
+                    <span className="text-xs font-semibold text-foreground tabular-nums">{pct}%</span>
+                    <p className="text-[10px] text-muted-foreground tabular-nums">{item.value}</p>
+                  </div>
+                </div>
+              )
+            })}
           </div>
         </div>
       </CardContent>
