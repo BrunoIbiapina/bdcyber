@@ -177,14 +177,16 @@ export default function Page() {
 
         {/* KPI cards */}
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {getKpis(filteredData).map((kpi) => {
+          {getKpis(filteredData).map((kpi, idx) => {
             const Icon = icons[kpi.icon as keyof typeof icons]
             const accent = kpiAccent[kpi.label] ?? kpiAccent["Total Eventos"]
             return (
               <Card
                 key={kpi.label}
+                style={{ animationDelay: `${idx * 80}ms` }}
                 className={cn(
                   "border border-border border-l-4 shadow-sm hover:shadow-md transition-shadow",
+                  "animate-in fade-in-0 slide-in-from-bottom-3 duration-500",
                   accent.border
                 )}
               >

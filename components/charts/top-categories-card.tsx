@@ -17,16 +17,16 @@ interface TopCategoriesCardProps {
   data: CategoryCount[]
 }
 
-// Semantic: Malware=red, DDoS=blue, Intrusion=amber
+// Semantic: Malware=red (via destructive), DDoS=blue, Intrusion=amber
 const CATEGORY_COLORS: Record<string, string> = {
-  Malware:   "var(--color-chart-4)",
+  Malware:   "var(--color-destructive)",
   DDoS:      "var(--color-chart-1)",
   Intrusion: "var(--color-chart-3)",
 }
 
 export function TopCategoriesCard({ data }: TopCategoriesCardProps) {
   return (
-    <Card className="border border-border shadow-sm">
+    <Card className="border border-border shadow-sm animate-in fade-in-0 slide-in-from-bottom-2 duration-500">
       <CardHeader className="pb-2 pt-5 px-5">
         <CardTitle className="text-sm font-semibold text-foreground">Top Categorias</CardTitle>
       </CardHeader>
@@ -58,7 +58,14 @@ export function TopCategoriesCard({ data }: TopCategoriesCardProps) {
                   color: "var(--color-popover-foreground)",
                 }}
               />
-              <Bar dataKey="value" radius={[0, 4, 4, 0]} maxBarSize={28}>
+              <Bar
+                dataKey="value"
+                radius={[0, 4, 4, 0]}
+                maxBarSize={28}
+                isAnimationActive={true}
+                animationDuration={900}
+                animationEasing="ease-out"
+              >
                 {data.map((item, index) => (
                   <Cell
                     key={`cell-${index}`}

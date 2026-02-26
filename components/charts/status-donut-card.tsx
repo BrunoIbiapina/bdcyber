@@ -31,7 +31,7 @@ export function StatusDonutCard({ data }: StatusDonutCardProps) {
   const total = data.reduce((s, d) => s + d.value, 0)
 
   return (
-    <Card className="border border-border shadow-sm">
+    <Card className="border border-border shadow-sm animate-in fade-in-0 slide-in-from-bottom-2 duration-500" style={{ animationDelay: "100ms" }}>
       <CardHeader className="pb-2 pt-5 px-5">
         <CardTitle className="text-sm font-semibold text-foreground">Distribuição por Status</CardTitle>
       </CardHeader>
@@ -49,6 +49,10 @@ export function StatusDonutCard({ data }: StatusDonutCardProps) {
                   paddingAngle={3}
                   dataKey="value"
                   strokeWidth={0}
+                  isAnimationActive={true}
+                  animationBegin={150}
+                  animationDuration={1000}
+                  animationEasing="ease-out"
                 >
                   {data.map((item, index) => (
                     <Cell

@@ -25,11 +25,11 @@ const seriesConfig = [
 
 export function TimeSeriesCard({ data }: TimeSeriesCardProps) {
   return (
-    <Card className="border-border/50">
-      <CardHeader className="pb-2">
+    <Card className="border border-border shadow-sm animate-in fade-in-0 slide-in-from-bottom-2 duration-500">
+      <CardHeader className="pb-2 pt-5 px-5">
         <CardTitle className="text-sm font-semibold text-foreground">Eventos ao Longo do Tempo</CardTitle>
       </CardHeader>
-      <CardContent className="pt-0">
+      <CardContent className="pt-0 px-5 pb-5">
         <div className="h-[280px] w-full">
           <ResponsiveContainer width="100%" height="100%">
             <AreaChart data={data} margin={{ top: 5, right: 10, left: -10, bottom: 0 }}>
@@ -73,7 +73,7 @@ export function TimeSeriesCard({ data }: TimeSeriesCardProps) {
               <Legend
                 wrapperStyle={{ fontSize: "12px", color: "var(--color-muted-foreground)" }}
               />
-              {seriesConfig.map((s) => (
+              {seriesConfig.map((s, i) => (
                 <Area
                   key={s.key}
                   type="monotone"
@@ -82,6 +82,10 @@ export function TimeSeriesCard({ data }: TimeSeriesCardProps) {
                   strokeWidth={2}
                   fill={`url(#gradient-${s.key})`}
                   dot={false}
+                  isAnimationActive={true}
+                  animationDuration={1000}
+                  animationBegin={i * 150}
+                  animationEasing="ease-out"
                 />
               ))}
             </AreaChart>
