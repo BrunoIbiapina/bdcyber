@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "Next.js (projeto principal)",
+      "runtimeExecutable": "/bin/bash",
+      "runtimeArgs": ["/tmp/start_nextjs.sh"],
+      "port": 3000
+    },
+    {
+      "name": "Streamlit Dashboard",
+      "runtimeExecutable": "/bin/bash",
+      "runtimeArgs": ["/tmp/start_dashboard.sh"],
+      "port": 8501
+    }
+  ]
+}
